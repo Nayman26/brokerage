@@ -20,16 +20,22 @@ INSERT INTO assets (customer_id, asset_name, size, usable_size)
 VALUES (2, 'TRY', 1000, 1000);
 
 INSERT INTO assets (customer_id, asset_name, size, usable_size)
-VALUES (3, 'NYMN', 100, 100);
+VALUES (2, 'NYMN', 200, 200);
 
-INSERT INTO orders (id, customer_id, asset_name, order_side, size, price, status, create_date)
-VALUES (10, 1, 'NYMN', 'BUY', 50, 100, 'PENDING', CURRENT_TIMESTAMP);
+INSERT INTO assets (customer_id, asset_name, size, usable_size)
+VALUES (3, 'TRY', 3000, 3000);
 
-INSERT INTO orders (id, customer_id, asset_name, order_side, size, price, status, create_date)
-VALUES (11, 2, 'NYMN', 'SELL', 50, 90, 'PENDING', CURRENT_TIMESTAMP);
+INSERT INTO assets (customer_id, asset_name, size, usable_size)
+VALUES (3, 'NYMN', 300, 300);
 
-INSERT INTO orders (id, customer_id, asset_name, order_side, size, price, status, create_date)
-VALUES (12, 1, 'NYMN', 'BUY', 30, 80, 'PENDING', CURRENT_TIMESTAMP);
+INSERT INTO orders (customer_id, asset_name, order_side, size, price, status, create_date)
+VALUES (2, 'NYMN', 'BUY', 50, 100, 'PENDING', CURRENT_TIMESTAMP);
 
-INSERT INTO orders (id, customer_id, asset_name, order_side, size, price, status, create_date)
-VALUES (13, 2, 'THYAO', 'SELL', 50, 90, 'PENDING', CURRENT_TIMESTAMP);
+INSERT INTO orders (customer_id, asset_name, order_side, size, price, status, create_date)
+VALUES (2, 'NYMN', 'SELL', 50, 90, 'PENDING', CURRENT_TIMESTAMP);
+
+INSERT INTO orders (customer_id, asset_name, order_side, size, price, status, create_date)
+VALUES (3, 'THYAO', 'BUY', 30, 80, 'PENDING', CURRENT_TIMESTAMP);
+
+INSERT INTO orders (customer_id, asset_name, order_side, size, price, status, create_date)
+VALUES (3, 'THYAO', 'SELL', 50, 90, 'PENDING', CURRENT_TIMESTAMP);
